@@ -1,0 +1,21 @@
+package tracy.algorithm.array;
+
+/**
+ * User: tracy
+ * Date: 14-8-9
+ * 字数组最大和
+ */
+public class MaximumSubarray {
+    public int maxSubArray(int[] A) {
+        if(A==null || A.length==0){
+            return 0;
+        }
+        int max = Integer.MIN_VALUE,sum =0;
+        for(int i=0;i<A.length;i++){
+            sum+=A[i];
+            max = Math.max(max,sum);
+            sum=Math.max(sum,0);
+        }
+        return max;
+    }
+}
