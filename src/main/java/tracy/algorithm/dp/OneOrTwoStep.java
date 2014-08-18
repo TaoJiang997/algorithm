@@ -18,6 +18,17 @@ public class OneOrTwoStep {
         return climbStairs(n-1)+climbStairs(n-2);
     }
 
+    public static int climbStairs2(int n) {
+        if(n<=2)
+            return n;
+        int one = 2; int two = 1;
+        for(int i=3;i<=n;i++){
+            int tmp = one;
+            one = one+two;
+            two = tmp;
+        }
+        return one;
+    }
     public static void main(String[] args) {
         System.out.println(climbStairs(44));
     }
