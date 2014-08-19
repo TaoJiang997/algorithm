@@ -1,11 +1,9 @@
 package tracy.algorithm.other;
 
 /**
- * Created with IntelliJ IDEA.
  * User: tracy
  * Date: 14-7-17
- * Time: 下午11:35
- * To change this template use File | Settings | File Templates.
+ * 求1~n的全排列
  */
 public class Permutation {
     private static int n;

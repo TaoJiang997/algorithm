@@ -20,11 +20,18 @@ public class Node {
     public static Node of(){
         Node head = new Node(0);
         Node cur = head;
-        for(int i=1;i<100;i++){
+        for(int i=1;i<10;i++){
             Node next = new Node(i);
             cur.next = next;
             cur = next;
         }
         return head;
+    }
+
+    public static void print(Node node){
+        while (node!=null){
+            System.out.print(node.val+",");
+            node = node.next;
+        }
     }
 }
