@@ -1,13 +1,13 @@
 package tracy.algorithm.dp;
 
 /**
- * Created with IntelliJ IDEA.
  * User: tracy
  * Date: 14-8-2
  * Time: 下午2:41
- * To change this template use File | Settings | File Templates.
+ * LeetCode 70.Climbing Stairs
+ * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
  */
-public class OneOrTwoStep {
+public class ClimbingStairs {
     public static int climbStairs(int n) {
         if(n==0)
             return 0;

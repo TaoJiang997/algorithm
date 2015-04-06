@@ -7,7 +7,7 @@ package tracy.algorithm.linkedList;
  */
 public class DeleteNode {
 
-    public static Node delete(Node head,Node target){
+    public static ListNode delete(ListNode head,ListNode target){
         if(head==null || target==null){
             return head;
         }
@@ -18,7 +18,7 @@ public class DeleteNode {
             if(target == head){
                 return null;
             }else{
-                Node cur = head;
+                ListNode cur = head;
                 while (cur.next != target){
                     cur = cur.next;
                 }
@@ -30,18 +30,18 @@ public class DeleteNode {
 
 
     public static void main(String[] args) {
-        Node head = Node.of();
+        ListNode head = ListNode.of();
         head = delete(head,head);
-        Node.print(head);
+        ListNode.print(head);
         System.out.println("");
-        Node next = head.next;
+        ListNode next = head.next;
         head = delete(head,next);
-        Node.print(head);
+        ListNode.print(head);
         System.out.println("");
         while(next.next!=null){
             next = next.next;
         }
-        Node.print(delete(head,next));
+        ListNode.print(delete(head, next));
 
         while(next!=null){
             next = next.next;

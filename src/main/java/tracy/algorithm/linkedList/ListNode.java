@@ -1,7 +1,5 @@
 package tracy.algorithm.linkedList;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: tracy
@@ -9,78 +7,78 @@ import java.util.List;
  * Time: 下午9:20
  * To change this template use File | Settings | File Templates.
  */
-public class Node {
+public class ListNode {
     int val;
-    Node next;
-    public Node(int val){
+    ListNode next;
+    public ListNode(int val){
         this.val = val;
         this.next = null;
     }
 
-    public static Node of(){
-        Node head = new Node(0);
-        Node cur = head;
+    public static ListNode of(){
+        ListNode head = new ListNode(0);
+        ListNode cur = head;
         for(int i=1;i<10;i++){
-            Node next = new Node(i);
+            ListNode next = new ListNode(i);
             cur.next = next;
             cur = next;
         }
         return head;
     }
 
-    public static Node[] twoIntersect(){
-        Node head1  = new Node(0);
-        Node cur1 = head1;
+    public static ListNode[] twoIntersect(){
+        ListNode head1  = new ListNode(0);
+        ListNode cur1 = head1;
         for(int i=1;i<3;i++){
-            Node next = new Node(i);
+            ListNode next = new ListNode(i);
             cur1.next = next;
             cur1 = next;
         }
-        Node head2  = new Node(0);
-        Node cur2 = head2;
+        ListNode head2  = new ListNode(0);
+        ListNode cur2 = head2;
         for(int i=3;i<10;i++){
-            Node next = new Node(i);
+            ListNode next = new ListNode(i);
             cur2.next = next;
             cur2 = next;
         }
 
         for(int i=15;i<20;i++){
-            Node next = new Node(i);
+            ListNode next = new ListNode(i);
             cur1.next = next;
             cur2.next = next;
             cur1 = next;
             cur2 = next;
         }
 
-        Node[] result = new Node[2];
+        ListNode[] result = new ListNode[2];
         result[0] = head1;
         result[1] = head2;
         return result;
     }
 
-    public static Node[] twoSeperate(){
-        Node head1  = new Node(0);
-        Node cur1 = head1;
+    public static ListNode[] twoSeperate(){
+        ListNode head1  = new ListNode(0);
+        ListNode cur1 = head1;
         for(int i=1;i<3;i++){
-            Node next = new Node(i);
+            ListNode next = new ListNode(i);
             cur1.next = next;
             cur1 = next;
         }
-        Node head2  = new Node(0);
-        Node cur2 = head2;
+        ListNode head2  = new ListNode(0);
+        ListNode cur2 = head2;
         for(int i=3;i<10;i++){
-            Node next = new Node(i);
+            ListNode next = new ListNode(i);
             cur2.next = next;
             cur2 = next;
         }
-        Node[] result = new Node[2];
+        ListNode[] result = new ListNode[2];
         result[0] = head1;
         result[1] = head2;
         return result;
     }
 
 
-    public static void print(Node node){
+    public static void print(ListNode node){
         while (node!=null){
             System.out.print(node.val+",");
             node = node.next;
@@ -88,7 +86,7 @@ public class Node {
     }
 
 
-    public static int len(Node node){
+    public static int len(ListNode node){
         if(node==null){
             return 0;
         }

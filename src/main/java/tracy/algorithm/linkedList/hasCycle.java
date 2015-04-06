@@ -7,11 +7,11 @@ package tracy.algorithm.linkedList;
  * Given a linked list, determine if it has a cycle in it.
  */
 public class hasCycle {
-    public boolean hasCycle(Node head) {
+    public boolean hasCycle(ListNode head) {
         if(head == null)
             return false;
-        Node slow = head;
-        Node fast = head.next;
+        ListNode slow = head;
+        ListNode fast = head.next;
         while(slow!=null && fast!=null){
             if(fast.next==null)
                 break;

@@ -6,7 +6,7 @@ package tracy.algorithm.linkedList;
  */
 public class PrintListReversely {
 
-    public static void print(Node node){
+    public static void print(ListNode node){
         if(node!=null){
             if(node.next!=null){
                 print(node.next);
@@ -16,6 +16,6 @@ public class PrintListReversely {
     }
 
     public static void main(String[] args) {
-        print(Node.of());
+        print(ListNode.of());
     }
 }

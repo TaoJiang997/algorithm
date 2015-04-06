@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * Created with IntelliJ IDEA.
  * User: tracy
  * Date: 14-8-4
  * Time: 上午8:21
- * To change this template use File | Settings | File Templates.
+ * LeetCode 145.Binary Tree PostOrder Traversal
+ * Given a binary tree, return the postorder traversal of its nodes' values.
  */
 public class PostOrderTraversal {
     public List<Integer> postOrder(TreeNode root){

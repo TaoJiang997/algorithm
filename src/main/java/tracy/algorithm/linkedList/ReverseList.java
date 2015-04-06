@@ -9,16 +9,16 @@ package tracy.algorithm.linkedList;
  */
 public class ReverseList {
 
-    public static Node reverse(Node node){
+    public static ListNode reverse(ListNode node){
         if(node==null){
             return null;
         }
 
-        Node head = null;
-        Node cur = node;
-        Node prev = null;
+        ListNode head = null;
+        ListNode cur = node;
+        ListNode prev = null;
         while(cur!=null){
-            Node pnext = cur.next;
+            ListNode pnext = cur.next;
             cur.next = prev;
             if(pnext==null){
                 head = cur;
@@ -30,7 +30,7 @@ public class ReverseList {
     }
 
     public static void main(String[] args) {
-        Node node = Node.of();
+        ListNode node = ListNode.of();
         node = reverse(node);
         while (node!=null){
             System.out.print(node.val+",");

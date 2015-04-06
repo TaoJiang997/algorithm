@@ -9,16 +9,16 @@ package tracy.algorithm.linkedList;
  */
 public class FindFirstCommonNodeOfTwoList {
 
-    public static Node find(Node head1,Node head2){
+    public static ListNode find(ListNode head1,ListNode head2){
         if(head1==null || head2==null){
             return null;
         }
 
-        int len1= Node.len(head1);
-        int len2 = Node.len(head2);
+        int len1= ListNode.len(head1);
+        int len2 = ListNode.len(head2);
 
         if(len1<len2){
-            Node tmp = head1;
+            ListNode tmp = head1;
             head1 = head2;
             head2 = tmp;
         }//head1.length >= head2.length
@@ -43,8 +43,8 @@ public class FindFirstCommonNodeOfTwoList {
 
     public static void main(String[] args) {
         //Node[] nodes = Node.twoIntersect();
-        Node[] nodes = Node.twoSeperate();
-        Node node = find(nodes[0],nodes[1]);
+        ListNode[] nodes = ListNode.twoSeperate();
+        ListNode node = find(nodes[0],nodes[1]);
         if(node!=null){
             System.out.println(node.val);
         }else{

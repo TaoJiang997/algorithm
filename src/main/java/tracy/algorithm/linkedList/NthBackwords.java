@@ -7,13 +7,13 @@ package tracy.algorithm.linkedList;
  * 倒数第N个元素
  */
 public class NthBackwords {
-    public static Node find(Node node,int n){
+    public static ListNode find(ListNode node,int n){
         if(node==null){
             return null;
         }
 
-        Node fast = node;
-        Node slow = null;
+        ListNode fast = node;
+        ListNode slow = null;
         for(int i=1;i<n;i++){
             if(fast.next!=null){
                 fast =  fast.next;
@@ -32,7 +32,7 @@ public class NthBackwords {
     }
 
     public static void main(String[] args) {
-        System.out.println(find(Node.of(),2).val);
+        System.out.println(find(ListNode.of(),2).val);
     }
 
 }
