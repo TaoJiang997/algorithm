@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * Created with IntelliJ IDEA.
  * User: tracy
  * Date: 14-8-4
  * Time: 上午7:41
- * To change this template use File | Settings | File Templates.
+ * LeetCode 144.Binary Tree PreOrder Traversal
+ * Given a binary tree, return the preOrder traversal of its nodes' values.
  */
 public class PreOrderTraversal {
 

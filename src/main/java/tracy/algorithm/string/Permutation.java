@@ -1,4 +1,4 @@
-package tracy.algorithm.other;
+package tracy.algorithm.string;
 
 /**
  * User: tracy
