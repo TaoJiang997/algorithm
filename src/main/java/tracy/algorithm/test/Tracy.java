@@ -1,5 +1,6 @@
 package tracy.algorithm.test;
 
+
 /**
  * Created with IntelliJ IDEA.
  * User: tracy
@@ -9,6 +10,6 @@ package tracy.algorithm.test;
  */
 public class Tracy {
     public static void main(String[] args) {
-        System.out.println(Integer.lowestOneBit(1));
+        System.out.println('2'-'0');
     }
 }
