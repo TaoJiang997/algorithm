@@ -1,6 +1,8 @@
 package tracy.algorithm.test;
 
 
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  * User: tracy
@@ -10,6 +12,8 @@ package tracy.algorithm.test;
  */
 public class Tracy {
     public static void main(String[] args) {
-        System.out.println('2'-'0');
+        long val = 4;
+        short vl = 4;
+        System.out.println(val==vl);
     }
 }
