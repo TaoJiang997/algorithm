@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
  * User: tracy
  * Date: 14-8-13
  * Time: 下午11:58
- * To change this template use File | Settings | File Templates.
+ * 子串定义：如果字符串一的所有字符按其在字符串中的顺序出现在另外一个字符串二中，则字符串一称之为字符串二的子串。
+ * 注意，并不要求子串（字符串一）的字符必须连续出现在字符串二中。
+     LCS：请编写一个函数，输入两个字符串，求它们的最长公共子串，并打印出最长公共子串。
+     例如：输入两个字符串BDCABA和ABCBDAB，字符串BCBA和BDAB都是是它们的最长公共子序列，则输出它们的长度4，并打印任意一个子序列。
  */
 public class LCS {
     public static void find(String str1,String str2){
@@ -40,10 +42,17 @@ public class LCS {
         }
     }
 
+    /*
+        solution:
+            如果str1(i+1)与str2(j+1)相同，则len(i+1,j+1)==len(i,j)+1;
+            否则len(i+1,j+1)==Max(len(i+1,j),len(i,j+1));
+            len(m+1,n+1)为最大值
+     */
     public static void find2(String str1,String str2){
         if(str1==null || str2==null || str1.equals("") || str2.equals("")){
             return;
         }
+        //第一行与第一列为初始值，方便处理与理解
         int[][] matrix = new int[str1.length()+1][str2.length()+1];
         for(int i=0;i<str1.length();i++){
             for(int j=0;j<str2.length();j++){
