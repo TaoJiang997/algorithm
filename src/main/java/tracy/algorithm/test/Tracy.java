@@ -1,7 +1,6 @@
 package tracy.algorithm.test;
 
 
-import java.util.Arrays;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,8 +11,11 @@ import java.util.Arrays;
  */
 public class Tracy {
     public static void main(String[] args) {
-        long val = 4;
-        short vl = 4;
-        System.out.println(val==vl);
+        int[] src = new int[]{1,2,3,4,5};
+        int[] dest = new int[src.length-1];
+        System.arraycopy(src,3,dest,0,2);
+        System.arraycopy(src,0,dest,2,2);
+        for (int val : dest)
+            System.out.print(val);
     }
 }

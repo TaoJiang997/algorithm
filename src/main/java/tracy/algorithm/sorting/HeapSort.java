@@ -3,11 +3,9 @@ package tracy.algorithm.sorting;
 import java.util.Random;
 
 /**
- * Created with IntelliJ IDEA.
  * User: tracy
  * Date: 14-7-20
  * Time: 下午3:41
- * To change this template use File | Settings | File Templates.
  */
 public class HeapSort {
 
@@ -23,7 +21,7 @@ public class HeapSort {
         }
     }
 
-
+    //n*lg(n)
     public static void buildMaxHeap(int[] arr){
         if(arr==null || arr.length<=1){
             return;
@@ -36,7 +34,7 @@ public class HeapSort {
 
 
 
-    //假定左右节点都是最大堆
+    //假定左右节点都是最大堆：lg(n)
     public static void maxHeapify(int[] arr,int heapSize,int index){
         int left = index*2+1;
         int right = index*2+2;

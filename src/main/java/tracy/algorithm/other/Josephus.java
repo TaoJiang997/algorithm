@@ -1,6 +1,7 @@
 package tracy.algorithm.other;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -61,13 +62,24 @@ public class Josephus {
 
         // if there are only one integer in the circle initially,
         // of course the last remaining one is 0
-        int lastinteger = 0;
+        int lastInteger = 0;
+
+        /*
+        第一个人出列后的序列为：
+        0 1 3 4 5 6 7 8 9
+        即:
+        3 4 5 6 7 8 9 0 1（*）
+        我们把该式转化为:
+        0 1 2 3 4 5 6 7 8 (**)
+        则你会发现: （(**)+3）%10则转化为(*)式了
+        所以可以从n=1开始，返回的是0，然后递推“0”在n=2时对应的值
+         */
 
         // find the last remaining one in the circle with n integers
         for (int i = 2; i <= n; i ++)
-            lastinteger = (lastinteger + k) % i;
+            lastInteger = (lastInteger + k) % i;
 
-        return lastinteger;
+        return lastInteger;
     }
 
     public static void main(String[] args) {

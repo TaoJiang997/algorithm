@@ -11,16 +11,32 @@ public class Permutation {
     public static void perm(int[] arr,int start,int end){
         if(start==end){
             for(int i=0;i<=end;i++){
-                System.out.print(arr[i]+" ");
+                System.out.print(arr[i] + " ");
             }
             System.out.println("\n");
             n++;
-        }else{
-            for(int i=start;i<=end;i++){
-                swap(arr,start,i);
-                perm(arr,start+1,end);
-                swap(arr,start,i);
+            return;
+        }
+        for(int i=start;i<=end;i++){
+            swap(arr,start,i);
+            perm(arr,start+1,end);
+            swap(arr,start,i);
+        }
+    }
+
+    public static void perm2(int[] arr,int length,int start){
+        if(start==length-1){
+            for(int i=0;i<length;i++){
+                System.out.print(arr[i] + " ");
             }
+            System.out.println("\n");
+            n++;
+            return;
+        }
+        for(int j=start;j<length;j++){
+            swap(arr,start,j);
+            perm2(arr,length,start+1);
+            swap(arr,start,j);
         }
     }
 
@@ -37,7 +53,7 @@ public class Permutation {
             arr[i]=i+1;
         }
 
-        perm(arr,0,arr.length-1);
+        perm2(arr, arr.length,0);
         System.out.println(n);
     }
 }
