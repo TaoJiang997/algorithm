@@ -1,4 +1,4 @@
-package tracy.algorithm.KetamaHashing;
+package tracy.algorithm.engineer.KetamaHashing;
 
 /**
  * User: tracy
